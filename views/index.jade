@@ -3,4 +3,28 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  #{output}
+  table 
+    thread
+      +tableRow('head')
+    tbody
+      each row in output
+        - console.log(JSON.stringify(row))
+        +tableRow(row)
+
+
+
+mixin tableRow(data)
+  -
+    var cols = ['ID','Navn','Tændt',
+    'Strømforbug','AktuelForbrug',
+    'Styrke','Farve','TypeNummer'
+    ,'SoftwareVersion']
+  tr
+      each col in cols
+          if data == 'head'
+              th=col
+          else
+              if data[col] == null
+                td= "null"
+              else
+                td= data[col]
