@@ -2,8 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  table 
+  table(class="smart") 
     thread
       +tableRow('head')
     tbody
@@ -19,7 +18,7 @@ mixin tableRow(data)
     'Strømforbug','AktuelForbrug',
     'Styrke','Farve','TypeNummer'
     ,'SoftwareVersion']
-  tr
+  tr(class="smartRow")
       each col in cols
           if data == 'head'
               th=col

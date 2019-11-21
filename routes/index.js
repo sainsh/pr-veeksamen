@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
       con.query("SELECT * FROM smartpærer", function(err, result){
           if(err) throw err;
           
-          res.render('index', {output: result});
+          res.render('index', {title: "smartpærer", output: result});
       })
   })
 

@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+.smart{
+  border-collapse: collapse;
+}
+
+table, th, td{
+  text-align: center;
+  padding: 10px;
+  color: gray;
+  border: solid 2px black;
+  border-radius: 20px;
+  padding: 10px;
+  
+}
